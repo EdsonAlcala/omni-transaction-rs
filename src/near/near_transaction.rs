@@ -1,9 +1,10 @@
 use borsh::{BorshDeserialize, BorshSerialize};
+use near_sdk::json_types::U64;
 use near_sdk::serde::{Deserialize, Serialize};
 use near_sdk::{borsh, AccountId};
 use schemars::JsonSchema;
 
-use super::types::{Action, BlockHash, PublicKey, Signature, U64};
+use super::types::{Action, BlockHash, PublicKey, Signature};
 
 #[derive(Serialize, Deserialize, Debug, Clone, BorshSerialize, BorshDeserialize, JsonSchema)]
 #[serde(crate = "near_sdk::serde")]
@@ -59,7 +60,7 @@ mod tests {
         DeployContractAction as OmniDeployContractAction, ED25519Signature,
         FunctionCallAction as OmniFunctionCallAction, Secp256K1Signature,
         Signature as OmniSignature, StakeAction as OmniStakeAction,
-        TransferAction as OmniTransferAction, U128,
+        TransferAction as OmniTransferAction,
     };
     use crate::near::utils::PublicKeyStrExt;
     use near_crypto::{ED25519PublicKey, PublicKey};
@@ -75,6 +76,7 @@ mod tests {
         transaction::Transaction as NearPrimitiveTransaction,
         transaction::TransactionV0,
     };
+    use near_sdk::json_types::U128;
 
     #[derive(Debug)]
     struct TestCase {

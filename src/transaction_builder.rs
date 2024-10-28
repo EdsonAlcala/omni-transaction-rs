@@ -20,7 +20,7 @@ mod tests {
     use super::{TransactionBuilder as OmniTransactionBuilder, TxBuilder};
     use crate::near::types::{
         Action as OmniAction, BlockHash, PublicKey as OmniPublicKey,
-        TransferAction as OmniTransferAction, U128,
+        TransferAction as OmniTransferAction,
     };
     use crate::{
         evm::utils::parse_eth_address,
@@ -36,6 +36,7 @@ mod tests {
     use near_primitives::{
         action::Action, action::TransferAction, hash::CryptoHash, transaction::TransactionV0,
     };
+    use near_sdk::json_types::U128;
 
     #[test]
     fn test_near_transaction_builder_typed() {
