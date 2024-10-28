@@ -93,12 +93,12 @@ mod tests {
     use super::*;
     use crate::near::types::{
         Action as OmniAction, PublicKey as OmniPublicKey, TransferAction as OmniTransferAction,
-        U128,
     };
     use near_crypto::PublicKey;
     use near_primitives::{
         action::Action, action::TransferAction, hash::CryptoHash, transaction::TransactionV0,
     };
+    use near_sdk::json_types::U128;
 
     #[test]
     fn test_near_transaction_builder_against_near_primitives() {

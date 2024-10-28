@@ -28,7 +28,7 @@ near = []
 rlp = "0.6.1"
 hex = "0.4.3"
 borsh = { version = "1.0.0", features = ["derive"] }
-near-sdk = { version = "5.3.0", features = ["schemars"] }
+near-sdk = { version = "5.3.0", features = ["schemars", "abi"] }
 near-account-id = { version = "1.0.0", features = ["schemars"] }
 serde-big-array = "0.5.1"
 bs58 = "0.5.1"

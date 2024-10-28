@@ -1,10 +1,9 @@
 use crate::near::types::PublicKey;
 use borsh::{BorshDeserialize, BorshSerialize};
+use near_sdk::json_types::{U128, U64};
 use near_sdk::serde::{Deserialize, Serialize};
 use near_sdk::AccountId;
 use schemars::JsonSchema;
-
-use super::{U128, U64};
 
 #[derive(
     Serialize,
